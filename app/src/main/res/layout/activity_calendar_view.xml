@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.balckhao.blackhaocustomview.calendarView.CalendarView
+            android:id="@+id/my_calendar_view"
+            android:layout_width="500dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+
+        <!--输入日期-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/year_input"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="年" />
+
+            <EditText
+                android:id="@+id/month_input"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="月" />
+
+            <Button
+                android:id="@+id/update_calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:onClick="onClick"
+                android:text="设置"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/show_result"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+</RelativeLayout>

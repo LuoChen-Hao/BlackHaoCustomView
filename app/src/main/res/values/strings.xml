@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">BlackHaoCustomView</string>
+    <string name="app_name">BlackHaoCustom</string>
+    <string name="calendarView">calendar</string>
+    <string name="segmentView">segment</string>
+    <string name="circleProgressView">circleProgress</string>
 </resources>

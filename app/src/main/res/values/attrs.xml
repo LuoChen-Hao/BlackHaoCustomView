@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textSize" format="dimension" />
+    <!--分屏按钮-->
+    <declare-styleable name="SegmentControlView">
+        <attr name="textSize" />
+        <attr name="textSelectedColor" format="color" />
+        <attr name="textUnSelectedColor" format="color" />
+        <attr name="viewSelectedColor" format="color" />
+        <attr name="viewUnSelectedColor" format="color" />
+        <attr name="roundRadius" format="integer" />
+        <attr name="strokeWidth" format="dimension"/>
+    </declare-styleable>
+
+    <!--圆形进度条-->
+    <declare-styleable name="CircleProgressBar">
+        <attr name="textColor" format="color" />
+        <attr name="progressColor" format="color" />
+        <attr name="bottomColor" format="color" />
+        <attr name="topColor" format="color" />
+        <attr name="progressWidthPercent" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="progress" format="integer" />
+        <attr name="textSize" />
+    </declare-styleable>
+
+    <!--日历-->
+    <declare-styleable name="CalendarView">
+        <attr name="weekViewBgColor" format="color" />
+        <attr name="weekTextColor" format="color" />
+        <attr name="dateViewBgColor" format="color" />
+        <attr name="dateTextColor" format="color" />
+        <attr name="dateSelectedBgColor" format="color" />
+        <attr name="dateTextSelectedColor" format="color" />
+        <attr name="year" format="integer" />
+        <attr name="month" format="integer" />
+        <attr name="selected" format="integer" />
+        <attr name="textSize"/>
+    </declare-styleable>
+</resources>

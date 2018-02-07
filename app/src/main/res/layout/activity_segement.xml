@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.balckhao.blackhaocustomview.segmentViews.SegmentControlView
+        android:id="@+id/segment_view_1"
+        android:layout_width="180dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        custom:roundRadius="100"
+        custom:strokeWidth="1dp"
+        custom:textSelectedColor="@android:color/holo_green_dark"
+        custom:textSize="16sp"
+        custom:textUnSelectedColor="@android:color/holo_orange_dark"
+        custom:viewSelectedColor="@android:color/holo_blue_bright"
+        custom:viewUnSelectedColor="@android:color/white" />
+
+    <com.balckhao.blackhaocustomview.segmentViews.SegmentControlView
+        android:id="@+id/segment_view_2"
+        android:layout_width="150dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        custom:roundRadius="10"
+        custom:strokeWidth="3dp"
+        custom:textSelectedColor="@android:color/holo_red_dark"
+        custom:textSize="16sp"
+        custom:textUnSelectedColor="@android:color/darker_gray"
+        custom:viewSelectedColor="@android:color/holo_green_dark"
+        custom:viewUnSelectedColor="@android:color/white" />
+
+    <com.balckhao.blackhaocustomview.segmentViews.SegmentControlView
+        android:id="@+id/segment_view_3"
+        android:layout_width="150dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="150dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

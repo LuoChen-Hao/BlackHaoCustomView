@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.balckhao.testActivities.CalendarViewActivity" />
+        <activity android:name="com.balckhao.testActivities.SegmentActivity" />
+        <activity android:name="com.balckhao.testActivities.CircleProgressActivity"/>
     </application>
 
 </manifest>
