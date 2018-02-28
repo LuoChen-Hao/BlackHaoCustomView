@@ -67,4 +67,9 @@
         <!--圆角度-->
         <attr name="radius" format="dimension"/>
     </declare-styleable>
+
+    <!--TableTimeView-->
+    <declare-styleable name="TableTimeView">
+        
+    </declare-styleable>
 </resources>
