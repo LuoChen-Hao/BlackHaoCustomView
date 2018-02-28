@@ -8,6 +8,7 @@ import android.view.View;
 import com.balckhao.testActivities.CalendarViewActivity;
 import com.balckhao.testActivities.CircleProgressActivity;
 import com.balckhao.testActivities.SegmentActivity;
+import com.balckhao.testActivities.SpinnerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.circle_progress_activity:
                 Intent i3 = new Intent(this, CircleProgressActivity.class);
                 startActivity(i3);
+                break;
+            case R.id.spinner_view_activity:
+                Intent i4 = new Intent(this, SpinnerActivity.class);
+                startActivity(i4);
                 break;
         }
     }

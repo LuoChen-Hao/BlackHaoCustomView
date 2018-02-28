@@ -3,4 +3,5 @@
     <string name="calendarView">calendar</string>
     <string name="segmentView">segment</string>
     <string name="circleProgressView">circleProgress</string>
+    <string name="spinner_view">SpinnerView</string>
 </resources>

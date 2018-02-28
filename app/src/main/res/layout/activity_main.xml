@@ -7,36 +7,57 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/calendar_activity"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="10dp"
             android:onClick="onClick"
             android:text="@string/calendarView"
             android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/segment_activity"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="10dp"
             android:onClick="onClick"
             android:text="@string/segmentView"
             android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/circle_progress_activity"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="10dp"
             android:onClick="onClick"
             android:text="@string/circleProgressView"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/spinner_view_activity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:onClick="onClick"
+            android:text="@string/spinner_view"
             android:textAllCaps="false"/>
     </LinearLayout>
 </LinearLayout>

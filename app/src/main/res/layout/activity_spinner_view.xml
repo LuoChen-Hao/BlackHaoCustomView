@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <com.balckhao.blackhaocustomview.spinnerView.SpinnerView
+        android:id="@+id/spinner_view_1"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        custom:borderColor="#26afcc"
+        custom:borderWidth="2dp"
+        custom:inputLen="150dp"
+        custom:srcPadding="2dp"
+        custom:textColor="@color/black"
+        custom:textSize="16sp"
+        custom:title="@string/app_name"
+        custom:titleColor="@color/red"
+        custom:titleSize="16sp"
+        custom:radius="2dp"/>
+
+    <com.balckhao.blackhaocustomview.spinnerView.SpinnerView
+        android:id="@+id/spinner_view_2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="70dp"
+        custom:borderColor="#26afcc"
+        custom:borderWidth="2dp"
+        custom:inputLen="90dp"
+        custom:pullDownPressedSrc="@drawable/pull_test_pressed"
+        custom:pullDownSrc="@drawable/pull_test"
+        custom:srcPadding="1dp"
+        custom:textColor="@color/black"
+        custom:textSize="16sp" />
+</LinearLayout>
