@@ -59,5 +59,16 @@
             android:onClick="onClick"
             android:text="@string/spinner_view"
             android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/table_time_activity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:onClick="onClick"
+            android:text="@string/table_time"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </LinearLayout>

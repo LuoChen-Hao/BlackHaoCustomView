@@ -4,4 +4,5 @@
     <string name="segmentView">segment</string>
     <string name="circleProgressView">circleProgress</string>
     <string name="spinner_view">SpinnerView</string>
+    <string name="table_time">TableTimeView</string>
 </resources>

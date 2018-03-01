@@ -3,6 +3,10 @@
     <attr name="textSize" format="dimension" />
     <!--字体颜色-->
     <attr name="textColor" format="color" />
+    <!--边框颜色-->
+    <attr name="borderColor" format="color" />
+    <!--边框宽度-->
+    <attr name="borderWidth" format="dimension"/>
     <!--分屏按钮-->
     <declare-styleable name="SegmentControlView">
         <attr name="textSize" />
@@ -51,9 +55,9 @@
         <!--字体颜色-->
         <attr name="textColor"  />
         <!--边框颜色-->
-        <attr name="borderColor" format="color" />
+        <attr name="borderColor" />
         <!--边框宽度-->
-        <attr name="borderWidth" format="dimension"/>
+        <attr name="borderWidth"/>
         <!--按钮资源padding-->
         <attr name="srcPadding" format="dimension"/>
         <!--标题大小-->
@@ -70,6 +74,16 @@
 
     <!--TableTimeView-->
     <declare-styleable name="TableTimeView">
-        
+        <!--边框颜色-->
+        <attr name="borderColor" />
+        <!--边框宽度-->
+        <attr name="borderWidth"/>
+        <!--字体大小-->
+        <attr name="textSize"/>
+        <!--字体颜色-->
+        <attr name="textColor"  />
+        <attr name="dayClassNum" format="integer"/>
     </declare-styleable>
+
+
 </resources>

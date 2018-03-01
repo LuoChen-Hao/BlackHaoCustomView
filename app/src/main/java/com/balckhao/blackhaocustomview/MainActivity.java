@@ -9,6 +9,7 @@ import com.balckhao.testActivities.CalendarViewActivity;
 import com.balckhao.testActivities.CircleProgressActivity;
 import com.balckhao.testActivities.SegmentActivity;
 import com.balckhao.testActivities.SpinnerActivity;
+import com.balckhao.testActivities.TableTimeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.spinner_view_activity:
                 Intent i4 = new Intent(this, SpinnerActivity.class);
                 startActivity(i4);
+                break;
+            case R.id.table_time_activity:
+                Intent i5 = new Intent(this, TableTimeActivity.class);
+                startActivity(i5);
                 break;
         }
     }
