@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--公用自定义属性-->
+    <!--字体大小-->
     <attr name="textSize" format="dimension" />
     <!--字体颜色-->
     <attr name="textColor" format="color" />
     <!--边框颜色-->
     <attr name="borderColor" format="color" />
     <!--边框宽度-->
-    <attr name="borderWidth" format="dimension"/>
+    <attr name="borderWidth" format="dimension" />
+    <!--下拉按钮资源-->
+    <attr name="pullDownSrc" format="reference" />
+    <!--下拉按下按钮资源-->
+    <attr name="pullDownPressedSrc" format="reference" />
+    <!--最大进度-->
+    <attr name="max" format="integer" />
+    <!--当前进度-->
+    <attr name="progress" format="integer" />
+    <!--圆角度-->
+    <attr name="radius" format="dimension" />
+    <!--进度条颜色-->
+    <attr name="progressColor" format="color" />
+
     <!--分屏按钮-->
     <declare-styleable name="SegmentControlView">
         <attr name="textSize" />
@@ -15,18 +30,18 @@
         <attr name="viewSelectedColor" format="color" />
         <attr name="viewUnSelectedColor" format="color" />
         <attr name="roundRadius" format="integer" />
-        <attr name="strokeWidth" format="dimension"/>
+        <attr name="strokeWidth" format="dimension" />
     </declare-styleable>
 
     <!--圆形进度条-->
     <declare-styleable name="CircleProgressBar">
-        <attr name="textColor"/>
-        <attr name="progressColor" format="color" />
+        <attr name="textColor" />
+        <attr name="progressColor" />
         <attr name="bottomColor" format="color" />
         <attr name="topColor" format="color" />
         <attr name="progressWidthPercent" format="integer" />
-        <attr name="max" format="integer" />
-        <attr name="progress" format="integer" />
+        <attr name="max" />
+        <attr name="progress" />
         <attr name="textSize" />
     </declare-styleable>
 
@@ -41,35 +56,35 @@
         <attr name="year" format="integer" />
         <attr name="month" format="integer" />
         <attr name="selected" format="integer" />
-        <attr name="textSize"/>
+        <attr name="textSize" />
     </declare-styleable>
 
     <!--SpinnerView-->
     <declare-styleable name="SpinnerView">
         <!--下拉按钮资源-->
-        <attr name="pullDownSrc" format="reference" />
+        <attr name="pullDownSrc" />
         <!--下拉按下按钮资源-->
-        <attr name="pullDownPressedSrc" format="reference" />
+        <attr name="pullDownPressedSrc" />
         <!--字体大小-->
-        <attr name="textSize"/>
+        <attr name="textSize" />
         <!--字体颜色-->
-        <attr name="textColor"  />
+        <attr name="textColor" />
         <!--边框颜色-->
         <attr name="borderColor" />
         <!--边框宽度-->
-        <attr name="borderWidth"/>
+        <attr name="borderWidth" />
         <!--按钮资源padding-->
-        <attr name="srcPadding" format="dimension"/>
+        <attr name="srcPadding" format="dimension" />
         <!--标题大小-->
-        <attr name="titleSize" format="dimension"/>
+        <attr name="titleSize" format="dimension" />
         <!--标题颜色-->
         <attr name="titleColor" format="color" />
         <!--标题-->
         <attr name="title" format="string" />
         <!--输入框大小-->
-        <attr name="inputLen" format="dimension"/>
+        <attr name="inputLen" format="dimension" />
         <!--圆角度-->
-        <attr name="radius" format="dimension"/>
+        <attr name="radius" />
     </declare-styleable>
 
     <!--TableTimeView-->
@@ -77,13 +92,39 @@
         <!--边框颜色-->
         <attr name="borderColor" />
         <!--边框宽度-->
-        <attr name="borderWidth"/>
+        <attr name="borderWidth" />
         <!--字体大小-->
-        <attr name="textSize"/>
+        <attr name="textSize" />
         <!--字体颜色-->
-        <attr name="textColor"  />
-        <attr name="dayClassNum" format="integer"/>
+        <attr name="textColor" />
+        <attr name="dayClassNum" format="integer" />
     </declare-styleable>
 
+    <!--MySeekBarView-->
+    <declare-styleable name="MySeekBarView">
+        <!--边框宽度-->
+        <attr name="borderWidth" />
+        <!--下拉按钮资源-->
+        <attr name="pullDownSrc" />
+        <!--下拉按下按钮资源-->
+        <attr name="pullDownPressedSrc" />
+        <!--圆角度-->
+        <attr name="radius" />
+        <!--垂直/水平样式-->
+        <attr name="orientation" format="enum">
+            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="2" />
+        </attr>
+        <!--偏移量-->
+        <attr name="offset" format="dimension" />
+        <!--最大进度-->
+        <attr name="max" />
+        <!--当前进度-->
+        <attr name="progress" />
+        <!--进度颜色-->
+        <attr name="progressColor" />
+        <!--未选中进度颜色-->
+        <attr name="unProgressColor" format="color" />
+    </declare-styleable>
 
 </resources>

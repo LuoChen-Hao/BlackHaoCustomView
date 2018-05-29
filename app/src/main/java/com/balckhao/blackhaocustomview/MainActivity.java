@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.balckhao.testActivities.SeekBarActivity;
 import com.balckhao.testActivities.CalendarViewActivity;
 import com.balckhao.testActivities.CircleProgressActivity;
 import com.balckhao.testActivities.SegmentActivity;
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.table_time_activity:
                 Intent i5 = new Intent(this, TableTimeActivity.class);
                 startActivity(i5);
+                break;
+            case R.id.seek_bar_activity:
+                Intent i6 = new Intent(this, SeekBarActivity.class);
+                startActivity(i6);
                 break;
         }
     }

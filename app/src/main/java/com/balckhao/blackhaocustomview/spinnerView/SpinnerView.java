@@ -100,11 +100,11 @@ public class SpinnerView extends View implements View.OnTouchListener {
             switch (attr) {
                 case R.styleable.SpinnerView_pullDownPressedSrc:
                     //下拉按钮按下资源ID
-                    pullDownPressedSrc = a.getResourceId(attr, R.drawable.pull_down_pressed);
+                    pullDownPressedSrc = a.getResourceId(attr, R.drawable.spinner_pressed);
                     break;
                 case R.styleable.SpinnerView_pullDownSrc:
                     //下拉按钮资源ID
-                    pullDownSrc = a.getResourceId(attr, R.drawable.pull_down);
+                    pullDownSrc = a.getResourceId(attr, R.drawable.spinner_normal);
                     break;
                 case R.styleable.SpinnerView_textSize:
                     // 默认设置为16sp，TypeValue也可以把sp转化为px
@@ -185,8 +185,8 @@ public class SpinnerView extends View implements View.OnTouchListener {
         sideLength = 20;
         borderWidth = 3;
         borderColor = Color.GRAY;
-        pullDownPressedSrc = R.drawable.pull_down_pressed;
-        pullDownSrc = R.drawable.pull_down;
+        pullDownPressedSrc = R.drawable.spinner_pressed;
+        pullDownSrc = R.drawable.spinner_normal;
         inputLen = 50;
         radius = 0;
         data = new ArrayList<>();

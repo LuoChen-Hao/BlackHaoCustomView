@@ -5,4 +5,5 @@
     <string name="circleProgressView">circleProgress</string>
     <string name="spinner_view">SpinnerView</string>
     <string name="table_time">TableTimeView</string>
+    <string name="seek_bar">SeekBar</string>
 </resources>
