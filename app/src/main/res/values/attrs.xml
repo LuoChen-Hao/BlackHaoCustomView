@@ -102,8 +102,6 @@
 
     <!--MySeekBarView-->
     <declare-styleable name="MySeekBarView">
-        <!--边框宽度-->
-        <attr name="borderWidth" />
         <!--下拉按钮资源-->
         <attr name="pullDownSrc" />
         <!--下拉按下按钮资源-->
@@ -125,6 +123,8 @@
         <attr name="progressColor" />
         <!--未选中进度颜色-->
         <attr name="unProgressColor" format="color" />
+        <!--是否可拖动-->
+        <attr name="draggable" format="boolean"/>
     </declare-styleable>
 
 </resources>

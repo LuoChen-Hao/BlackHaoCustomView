@@ -9,12 +9,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
@@ -29,8 +26,6 @@ import com.balckhao.blackhaocustomview.R;
 
 public class MySeekBarView extends View implements View.OnTouchListener {
 
-    //边框宽度
-    private int borderWidth;
     //下拉按钮资源ID
     private int pullDownSrc;
     //下拉按钮按下资源ID
@@ -65,6 +60,10 @@ public class MySeekBarView extends View implements View.OnTouchListener {
     private int progressLength;
     //按钮宽度
     private int srcLength;
+    //是否可拖动
+    private boolean isDrag = true;
+    //进度回调
+    private OnProgressChangeListener listener;
 
     public MySeekBarView(Context context) {
         this(context, null, 0);
@@ -90,11 +89,6 @@ public class MySeekBarView extends View implements View.OnTouchListener {
                 case R.styleable.MySeekBarView_pullDownSrc:
                     //下拉按钮资源ID
                     pullDownSrc = a.getResourceId(attr, R.drawable.seek_bar_normal);
-                    break;
-                case R.styleable.MySeekBarView_borderWidth:
-                    // 默认设置为2px，TypeValue也可以把sp转化为px
-                    borderWidth = a.getDimensionPixelSize(attr, (int) TypedValue.applyDimension(
-                            TypedValue.COMPLEX_UNIT_DIP, 2, getResources().getDisplayMetrics()));
                     break;
                 case R.styleable.MySeekBarView_radius:
                     //圆角度
@@ -129,6 +123,9 @@ public class MySeekBarView extends View implements View.OnTouchListener {
                     //获取进度
                     max = a.getInt(attr, 0);
                     break;
+                case R.styleable.MySeekBarView_draggable:
+                    isDrag = a.getBoolean(attr, true);
+                    break;
                 default:
                     break;
             }
@@ -155,7 +152,6 @@ public class MySeekBarView extends View implements View.OnTouchListener {
 
     //初始化默认参数
     private void initDefaultValue() {
-        borderWidth = 3;
         pullDownPressedSrc = R.drawable.seek_bar_pressed;
         pullDownSrc = R.drawable.seek_bar_normal;
         radius = 0;
@@ -165,6 +161,7 @@ public class MySeekBarView extends View implements View.OnTouchListener {
         unProgressColor = Color.WHITE;
         max = 100;
         progress = 0;
+        isDrag = true;
     }
 
     @Override
@@ -174,21 +171,21 @@ public class MySeekBarView extends View implements View.OnTouchListener {
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(progressColor);
         if (isVertical) {
-            canvas.drawRoundRect(offset + borderWidth, y,
-                    getWidth() - offset - borderWidth, getHeight() - borderWidth - srcLength / 2,
-                    radius - borderWidth / 2, radius - borderWidth / 2, paint);
+            canvas.drawRoundRect(offset, y,
+                    getWidth() - offset, getHeight() - srcLength / 2,
+                    radius / 2, radius / 2, paint);
         } else {
-            canvas.drawRoundRect(offset + borderWidth + srcLength / 2, offset + borderWidth,
-                    x, getHeight() - borderWidth - offset, radius - borderWidth / 2, radius - borderWidth / 2, paint);
+            canvas.drawRoundRect(offset + srcLength / 2, offset,
+                    x, getHeight() - offset, radius / 2, radius / 2, paint);
         }
         //绘制未选中进度
         paint.setColor(unProgressColor);
         if (isVertical) {
-            canvas.drawRoundRect(offset + borderWidth, borderWidth + srcLength / 2,
-                    getWidth() - offset - borderWidth, y, radius - borderWidth / 2, radius - borderWidth / 2, paint);
+            canvas.drawRoundRect(offset, srcLength / 2,
+                    getWidth() - offset, y, radius / 2, radius / 2, paint);
         } else {
-            canvas.drawRoundRect(x, offset + borderWidth, getWidth() - offset - borderWidth - srcLength / 2,
-                    getHeight() - borderWidth - offset, radius - borderWidth / 2, radius - borderWidth / 2, paint);
+            canvas.drawRoundRect(x, offset, getWidth() - offset - srcLength / 2,
+                    getHeight() - offset, radius / 2, radius / 2, paint);
         }
         //绘制按钮
         rect.set(x - srcLength / 2, y - srcLength / 2, x + srcLength / 2, y + srcLength / 2);
@@ -223,7 +220,6 @@ public class MySeekBarView extends View implements View.OnTouchListener {
             //wrap_content
             height = 50;
         }
-
         setMeasuredDimension(width, height);
     }
 
@@ -244,15 +240,12 @@ public class MySeekBarView extends View implements View.OnTouchListener {
     }
 
     /**
-     * 从矢量图获取Bitmap
+     * 从矢量图获取 Bitmap
      */
     public Bitmap getBitmapFromVectorDrawable(int drawableId) {
         Drawable drawable = ContextCompat.getDrawable(getContext(), drawableId);
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            drawable = (DrawableCompat.wrap(drawable)).mutate();
-        }
-        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(),
-                Bitmap.Config.ARGB_8888);
+        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(),
+                drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
         drawable.draw(canvas);
@@ -261,34 +254,87 @@ public class MySeekBarView extends View implements View.OnTouchListener {
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-                isPressed = true;
-                postInvalidate();
-                break;
-            case MotionEvent.ACTION_UP:
-                isPressed = false;
-                postInvalidate();
-                break;
-            case MotionEvent.ACTION_MOVE:
-                if (isVertical) {
-                    if (event.getY() > srcLength / 2 && event.getY() < getHeight() - srcLength / 2) {
-                        y = (int) event.getY();
-                        x = getWidth() / 2;
-                        postInvalidate();
-                        progress = (int) ((getHeight() - srcLength / 2 - y) * 1.0 / progressLength * max);
+        if (isDrag) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    isPressed = true;
+                    postInvalidate();
+                    if (listener != null) {
+                        listener.onPressDown(v, progress);
                     }
-                } else {
-                    if (event.getX() > srcLength / 2 && event.getX() < getWidth() - srcLength / 2) {
-                        x = (int) event.getX();
-                        y = getHeight() / 2;
-                        postInvalidate();
-                        progress = (int) ((x - srcLength / 2) * 1.0 / progressLength * max);
+                    break;
+                case MotionEvent.ACTION_UP:
+                    isPressed = false;
+                    postInvalidate();
+                    if (listener != null) {
+                        listener.onPutUp(v, progress);
                     }
-                }
-                Log.e("MySeekBarView", "progress:" + progress);
-                break;
+                    break;
+                case MotionEvent.ACTION_MOVE:
+                    if (isVertical) {
+                        if (event.getY() > srcLength / 2 && event.getY() < getHeight() - srcLength / 2) {
+                            y = (int) event.getY();
+                            x = getWidth() / 2;
+                            postInvalidate();
+                            progress = (int) ((getHeight() - srcLength / 2 - y) * 1.0 / progressLength * max);
+                        }
+                    } else {
+                        if (event.getX() > srcLength / 2 && event.getX() < getWidth() - srcLength / 2) {
+                            x = (int) event.getX();
+                            y = getHeight() / 2;
+                            postInvalidate();
+                            progress = (int) ((x - srcLength / 2) * 1.0 / progressLength * max);
+                        }
+                    }
+                    if (listener != null) {
+                        listener.onMove(v, progress);
+                    }
+                    break;
+            }
         }
         return true;
+    }
+
+    public void setOnProgressChangeListener(OnProgressChangeListener listener) {
+        this.listener = listener;
+    }
+
+    public int getProgress() {
+        return progress;
+    }
+
+    public void setProgress(int progress) {
+        this.progress = progress;
+        postInvalidate();
+    }
+
+    public int getMax() {
+        return max;
+    }
+
+    public void setMax(int max) {
+        this.max = max;
+    }
+
+    public boolean isDrag() {
+        return isDrag;
+    }
+
+    public void setDrag(boolean drag) {
+        isDrag = drag;
+    }
+
+    /**
+     * 进度条回调
+     */
+    public interface OnProgressChangeListener {
+        //按下
+        void onPressDown(View view, int progress);
+
+        //拖动
+        void onMove(View view, int progress);
+
+        //抬起
+        void onPutUp(View view, int progress);
     }
 }

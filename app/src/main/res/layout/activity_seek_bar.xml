@@ -6,10 +6,10 @@
     android:orientation="vertical">
 
     <com.balckhao.blackhaocustomview.mySeekBarView.MySeekBarView
+        android:id="@+id/horizontal_seekbar"
         android:layout_width="250dp"
         android:layout_height="20dp"
         android:layout_margin="10dp"
-        custom:borderWidth="2dp"
         custom:max="100"
         custom:offset="5dp"
         custom:orientation="horizontal"
@@ -19,13 +19,14 @@
         custom:unProgressColor="@android:color/holo_green_light" />
 
     <com.balckhao.blackhaocustomview.mySeekBarView.MySeekBarView
+        android:id="@+id/vertical_seekbar"
         android:layout_width="20dp"
         android:layout_height="250dp"
         android:layout_margin="10dp"
-        custom:borderWidth="2dp"
         custom:max="100"
         custom:offset="5dp"
         custom:orientation="vertical"
+        custom:draggable="false"
         custom:progress="50"
         custom:progressColor="@android:color/holo_blue_bright"
         custom:radius="5dp"
