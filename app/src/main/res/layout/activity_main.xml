@@ -83,4 +83,22 @@
             android:text="@string/seek_bar"
             android:textAllCaps="false" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/download_progress_button_activity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/download_progress_btn"
+            android:textAllCaps="false" />
+    </LinearLayout>
 </LinearLayout>

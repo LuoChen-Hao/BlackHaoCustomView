@@ -32,5 +32,4 @@
         custom:radius="5dp"
         custom:unProgressColor="@android:color/darker_gray" />
 
-
 </LinearLayout>

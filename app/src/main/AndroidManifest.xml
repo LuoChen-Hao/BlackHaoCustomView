@@ -18,10 +18,11 @@
         </activity>
         <activity android:name="com.balckhao.testActivities.CalendarViewActivity" />
         <activity android:name="com.balckhao.testActivities.SegmentActivity" />
-        <activity android:name="com.balckhao.testActivities.CircleProgressActivity"/>
-        <activity android:name="com.balckhao.testActivities.SpinnerActivity"/>
-        <activity android:name="com.balckhao.testActivities.TableTimeActivity"/>
-        <activity android:name="com.balckhao.testActivities.SeekBarActivity"/>
+        <activity android:name="com.balckhao.testActivities.CircleProgressActivity" />
+        <activity android:name="com.balckhao.testActivities.SpinnerActivity" />
+        <activity android:name="com.balckhao.testActivities.TableTimeActivity" />
+        <activity android:name="com.balckhao.testActivities.SeekBarActivity" />
+        <activity android:name="com.balckhao.testActivities.DownloadProgressButtonActivity"></activity>
     </application>
 
 </manifest>

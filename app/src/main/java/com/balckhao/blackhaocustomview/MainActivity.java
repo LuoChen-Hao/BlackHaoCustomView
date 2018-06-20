@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.SeekBar;
 
+import com.balckhao.testActivities.DownloadProgressButtonActivity;
 import com.balckhao.testActivities.SeekBarActivity;
 import com.balckhao.testActivities.CalendarViewActivity;
 import com.balckhao.testActivities.CircleProgressActivity;
@@ -46,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.seek_bar_activity:
                 Intent i6 = new Intent(this, SeekBarActivity.class);
                 startActivity(i6);
+                break;
+            case R.id.download_progress_button_activity:
+                Intent i7 = new Intent(this, DownloadProgressButtonActivity.class);
+                startActivity(i7);
                 break;
         }
     }

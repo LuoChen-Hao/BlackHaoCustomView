@@ -127,4 +127,14 @@
         <attr name="draggable" format="boolean"/>
     </declare-styleable>
 
+    <!--圆形进度条-->
+    <declare-styleable name="DownloadProgressButton">
+        <attr name="textColor" />
+        <attr name="textSize" />
+        <attr name="progressColor"  />
+        <attr name="bottomColor"  />
+        <attr name="topColor" />
+        <attr name="progressWidthPercent" />
+    </declare-styleable>
+
 </resources>
