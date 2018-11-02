@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/bt_clear_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="clearCheck" />
+
+    <Button
+        android:id="@+id/bt_get_check_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bt_clear_check"
+        android:onClick="onClick"
+        android:text="getCheckId" />
+
+    <com.balckhao.blackhaocustomview.radioGroup.RelativeRadioGroup
+        android:id="@+id/rg_test"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:background="#3326afcc">
+
+        <RadioButton
+            android:id="@+id/cb_1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_check_box"
+            android:drawablePadding="10dp"
+            android:text="Test1" />
+
+        <RadioButton
+            android:id="@+id/cb_2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_check_box"
+            android:drawablePadding="10dp"
+            android:text="Test2" />
+
+        <RadioButton
+            android:id="@+id/cb_3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_check_box"
+            android:drawablePadding="10dp"
+            android:text="Test3" />
+
+        <RadioButton
+            android:id="@+id/cb_4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_check_box"
+            android:drawablePadding="10dp"
+            android:text="Test4" />
+
+        <RadioButton
+            android:id="@+id/cb_5"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_check_box"
+            android:drawablePadding="10dp"
+            android:text="Test5" />
+
+    </com.balckhao.blackhaocustomview.radioGroup.RelativeRadioGroup>
+
+    <TextView
+        android:id="@+id/tv_show_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+</RelativeLayout>

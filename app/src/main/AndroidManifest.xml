@@ -23,6 +23,7 @@
         <activity android:name="com.balckhao.testActivities.TableTimeActivity" />
         <activity android:name="com.balckhao.testActivities.SeekBarActivity" />
         <activity android:name="com.balckhao.testActivities.DownloadProgressButtonActivity"></activity>
+        <activity android:name=".radioGroup.RelativeRadioGroupActivity" />
     </application>
 
 </manifest>

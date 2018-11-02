@@ -100,5 +100,16 @@
             android:onClick="onClick"
             android:text="@string/download_progress_btn"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/relative_radio_group_activity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/relative_radio_button"
+            android:textAllCaps="false" />
     </LinearLayout>
 </LinearLayout>
