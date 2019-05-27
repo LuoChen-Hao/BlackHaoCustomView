@@ -111,5 +111,45 @@
             android:onClick="onClick"
             android:text="@string/relative_radio_button"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/spinner_new_activity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/spinner_new_button"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/img_group_activity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="img_group"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/pressed_activity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="pressed_view"
+            android:textAllCaps="false" />
     </LinearLayout>
 </LinearLayout>

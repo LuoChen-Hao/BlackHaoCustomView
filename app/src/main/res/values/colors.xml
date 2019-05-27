@@ -6,4 +6,9 @@
     <color name="black">#000000</color>
     <color name="red">#FF0000</color>
     <color name="lightBlue">#836FFF</color>
+
+    <color name="color_translucent">#00000000</color>
+    <color name="iot_bg_color_blue_checked">#374b7c</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_gray">#333333</color>
 </resources>

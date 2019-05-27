@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.balckhao.blackhaocustomview">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,8 +23,11 @@
         <activity android:name="com.balckhao.testActivities.SpinnerActivity" />
         <activity android:name="com.balckhao.testActivities.TableTimeActivity" />
         <activity android:name="com.balckhao.testActivities.SeekBarActivity" />
-        <activity android:name="com.balckhao.testActivities.DownloadProgressButtonActivity"></activity>
+        <activity android:name="com.balckhao.testActivities.DownloadProgressButtonActivity"/>
         <activity android:name=".radioGroup.RelativeRadioGroupActivity" />
+        <activity android:name="com.balckhao.testActivities.spinnerNew.TestSpinnerNewActivity" />
+        <activity android:name="com.balckhao.testActivities.ImgGroupActivity" />
+        <activity android:name="com.balckhao.testActivities.PressedViewActivity" />
     </application>
 
 </manifest>

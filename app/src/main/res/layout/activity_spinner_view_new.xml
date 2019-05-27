@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#26afcc">
+
+    <com.balckhao.testActivities.spinnerNew.TestSpinnerView
+        android:id="@+id/test_spinner_1"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        app:textSize="20sp"
+        app:textColor="@color/black"
+        app:srcPadding="5dp"/>
+
+    <com.balckhao.testActivities.spinnerNew.TestSpinnerView
+        android:id="@+id/test_spinner_2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        app:textSize="20sp"
+        app:textColor="@color/black"
+        app:srcPadding="5dp"/>
+
+</LinearLayout>

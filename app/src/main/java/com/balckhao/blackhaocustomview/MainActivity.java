@@ -8,12 +8,15 @@ import android.widget.SeekBar;
 
 import com.balckhao.blackhaocustomview.radioGroup.RelativeRadioGroupActivity;
 import com.balckhao.testActivities.DownloadProgressButtonActivity;
+import com.balckhao.testActivities.ImgGroupActivity;
+import com.balckhao.testActivities.PressedViewActivity;
 import com.balckhao.testActivities.SeekBarActivity;
 import com.balckhao.testActivities.CalendarViewActivity;
 import com.balckhao.testActivities.CircleProgressActivity;
 import com.balckhao.testActivities.SegmentActivity;
 import com.balckhao.testActivities.SpinnerActivity;
 import com.balckhao.testActivities.TableTimeActivity;
+import com.balckhao.testActivities.spinnerNew.TestSpinnerNewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, CalendarViewActivity.class));
                 break;
             case R.id.circle_progress_activity:
-                startActivity( new Intent(this, CircleProgressActivity.class));
+                startActivity(new Intent(this, CircleProgressActivity.class));
                 break;
             case R.id.spinner_view_activity:
                 startActivity(new Intent(this, SpinnerActivity.class));
@@ -48,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.relative_radio_group_activity:
                 startActivity(new Intent(this, RelativeRadioGroupActivity.class));
+                break;
+            case R.id.spinner_new_activity:
+                startActivity(new Intent(this, TestSpinnerNewActivity.class));
+                break;
+            case R.id.img_group_activity:
+                startActivity(new Intent(this, ImgGroupActivity.class));
+                break;
+            case R.id.pressed_activity:
+                startActivity(new Intent(this, PressedViewActivity.class));
                 break;
         }
     }
